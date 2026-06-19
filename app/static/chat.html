@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — Ask a question</title>
+<style>
+  :root {
+    --ink: #1A2332;
+    --ink-soft: #4A5568;
+    --paper: #FAF8F4;
+    --panel: #FFFFFF;
+    --line: #E5E0D8;
+    --accent: #D97757;
+    --accent-soft: #FBEAE3;
+    --good: #2F6B4F;
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 28px;
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--paper);
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .brand-name {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .brand-sub {
+    font-family: 'Courier New', monospace;
+    font-size: 10.5px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-left: 4px;
+  }
+
+  #userbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  #userbox img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+  }
+
+  #userbox a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    border: 1px solid var(--line);
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  #userbox a:hover { background: var(--accent-soft); border-color: var(--accent); }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  #login-gate {
+    margin: auto;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  #login-gate h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  #login-gate p {
+    color: var(--ink-soft);
+    font-size: 15px;
+    margin-bottom: 28px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    font-family: inherit;
+  }
+  .btn-primary:hover { background: #2B3A52; transform: translateY(-1px); }
+
+  #chat-screen { display: none; flex: 1; flex-direction: column; padding-top: 20px; }
+
+  #messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .msg { display: flex; flex-direction: column; max-width: 86%; }
+  .msg.user { align-self: flex-end; align-items: flex-end; }
+  .msg.bot { align-self: flex-start; align-items: flex-start; }
+
+  .bubble {
+    padding: 13px 17px;
+    border-radius: 14px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .msg.user .bubble {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 14px 14px 4px 14px;
+  }
+  .msg.bot .bubble {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px 14px 14px 4px;
+  }
+
+  .evidence {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .chip {
+    font-family: 'Courier New', monospace;
+    font-size: 10.5px;
+    color: var(--good);
+    background: #EAF3EE;
+    border: 1px solid #CFE6D9;
+    padding: 4px 9px;
+    border-radius: 99px;
+    cursor: default;
+    letter-spacing: 0.01em;
+  }
+  .chip:hover { background: #DCEEE3; }
+
+  .no-evidence {
+    font-family: 'Courier New', monospace;
+    font-size: 10.5px;
+    color: var(--ink-soft);
+    margin-top: 6px;
+    letter-spacing: 0.01em;
+  }
+
+  .typing {
+    display: flex;
+    gap: 4px;
+    padding: 13px 17px;
+  }
+  .typing span {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--ink-soft);
+    animation: bounce 1.2s infinite ease-in-out;
+  }
+  .typing span:nth-child(2) { animation-delay: 0.15s; }
+  .typing span:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes bounce { 0%, 60%, 100% { opacity: 0.3; } 30% { opacity: 1; } }
+
+  #composer {
+    display: flex;
+    gap: 10px;
+    padding: 14px 0 22px;
+    border-top: 1px solid var(--line);
+  }
+
+  #q {
+    flex: 1;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--ink);
+    resize: none;
+  }
+  #q:focus { outline: none; border-color: var(--accent); }
+
+  #send {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s;
+  }
+  #send:hover { background: #C5664A; }
+  #send:disabled { background: var(--line); cursor: default; }
+
+  .empty-state {
+    margin: auto;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 14px;
+    padding: 40px 20px;
+  }
+
+  .empty-state .stamp {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <div class="brand-mark">AI</div>
+    <div class="brand-name">Support</div>
+    <div class="brand-sub">RAG</div>
+  </div>
+  <div id="userbox"></div>
+</div>
+
+<main>
+  <div id="login-gate">
+    <h1>Ask anything from your docs</h1>
+    <p>This assistant answers strictly from the documents that have been uploaded to it — nothing made up, every answer traceable to a source.</p>
+    <a class="btn-primary" href="/auth/login">Sign in with Google →</a>
+  </div>
+
+  <div id="chat-screen">
+    <div id="messages">
+      <div class="empty-state" id="empty">
+        <div class="stamp">No messages yet</div>
+        Ask your first question below.
+      </div>
+    </div>
+    <form id="composer">
+      <textarea id="q" rows="1" placeholder="Ask a question…" autocomplete="off"></textarea>
+      <button type="submit" id="send">Send</button>
+    </form>
+  </div>
+</main>
+
+<script>
+const sessionId = "web-" + Math.random().toString(36).slice(2, 10);
+let isLoggedIn = false;
+
+async function checkAuth() {
+  try {
+    const res = await fetch('/me');
+    if (res.ok) {
+      const data = await res.json();
+      isLoggedIn = true;
+      renderUser(data.user);
+      document.getElementById('login-gate').style.display = 'none';
+      document.getElementById('chat-screen').style.display = 'flex';
+      loadHistory();
+    }
+  } catch (e) { /* not logged in */ }
+}
+
+function renderUser(user) {
+  const box = document.getElementById('userbox');
+  box.innerHTML = `
+    <img src="${user.picture || ''}" alt="">
+    <span>${user.name || user.email}</span>
+    <a href="/auth/logout" onclick="return doLogout(event)">Sign out</a>
+  `;
+}
+
+async function doLogout(e) {
+  e.preventDefault();
+  await fetch('/auth/logout');
+  location.reload();
+  return false;
+}
+
+function addMessage(role, text, sources) {
+  document.getElementById('empty')?.remove();
+  const wrap = document.createElement('div');
+  wrap.className = 'msg ' + role;
+
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.textContent = text;
+  wrap.appendChild(bubble);
+
+  if (role === 'bot') {
+    if (sources && sources.length > 0) {
+      const ev = document.createElement('div');
+      ev.className = 'evidence';
+      sources.forEach(s => {
+        const chip = document.createElement('span');
+        chip.className = 'chip';
+        chip.title = s.snippet || '';
+        chip.textContent = '◆ ' + (s.source || 'source').split(/[\\/]/).pop();
+        ev.appendChild(chip);
+      });
+      wrap.appendChild(ev);
+    }
+    // No "no matching source" label anymore — if sources is empty,
+    // it's either because the answer didn't need them, or none were used.
+  }
+
+  document.getElementById('messages').appendChild(wrap);
+  wrap.scrollIntoView({ behavior: 'smooth', block: 'end' });
+}
+
+function showTyping() {
+  const wrap = document.createElement('div');
+  wrap.className = 'msg bot';
+  wrap.id = 'typing-indicator';
+  wrap.innerHTML = `<div class="bubble"><div class="typing"><span></span><span></span><span></span></div></div>`;
+  document.getElementById('messages').appendChild(wrap);
+  wrap.scrollIntoView({ behavior: 'smooth', block: 'end' });
+}
+
+function hideTyping() {
+  document.getElementById('typing-indicator')?.remove();
+}
+
+async function sendQuestion(question) {
+  addMessage('user', question);
+  showTyping();
+  document.getElementById('send').disabled = true;
+
+  try {
+    const res = await fetch('/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question, session_id: sessionId }),
+    });
+    hideTyping();
+
+    if (!res.ok) {
+      const err = await res.json();
+      addMessage('bot', 'Error: ' + (err.detail || 'Something went wrong.'), []);
+      return;
+    }
+
+    const data = await res.json();
+    addMessage('bot', data.answer, data.sources);
+  } catch (e) {
+    hideTyping();
+    addMessage('bot', 'Could not reach the server. Please try again.', []);
+  } finally {
+    document.getElementById('send').disabled = false;
+  }
+}
+
+async function loadHistory() {
+  try {
+    const res = await fetch('/history?limit=10');
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.history && data.history.length > 0) {
+      document.getElementById('empty')?.remove();
+      data.history.slice().reverse().forEach(item => {
+        addMessage('user', item.question);
+        addMessage('bot', item.answer, item.sources);
+      });
+    }
+  } catch (e) { /* ignore */ }
+}
+
+document.getElementById('composer').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const input = document.getElementById('q');
+  const question = input.value.trim();
+  if (!question) return;
+  input.value = '';
+  sendQuestion(question);
+});
+
+document.getElementById('q').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    document.getElementById('composer').requestSubmit();
+  }
+});
+
+checkAuth();
+</script>
+
+</body>
+</html>

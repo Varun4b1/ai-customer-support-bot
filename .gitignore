@@ -1,0 +1,12 @@
+.env
+vectorstore/
+__pycache__/
+*.pyc
+.DS_Store
+*.egg-info/
+dist/
+.venv/
+venv/
+support_bot.db
+server.log
+*.log
