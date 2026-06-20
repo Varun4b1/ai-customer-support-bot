@@ -13,8 +13,7 @@ langchain-community==0.2.5
 chromadb==0.5.0
 
 # Document loaders
-pypdf==4.2.0                 # PDF loader
-pandas==2.2.2                # CSV loader
+pypdf==4.2.0                 # PDF loader          
 
 # Utilities
 python-dotenv==1.0.1
