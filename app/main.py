@@ -81,7 +81,7 @@ async def auth_callback(request: Request):
         "name": user["name"],
         "picture": user.get("picture", ""),
     }
-    return RedirectResponse(url="/me")
+    return RedirectResponse(url="/")
 
 
 @app.get("/auth/logout", tags=["Auth"])
