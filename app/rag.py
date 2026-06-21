@@ -1,10 +1,10 @@
 from langchain_groq import ChatGroq
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
-from app.config import GROQ_API_KEY, LLM_MODEL, EMBED_MODEL, CHROMA_DIR, COLLECTION, TOP_K
+from app.config import GROQ_API_KEY, LLM_MODEL, EMBED_MODEL, CHROMA_DIR, COLLECTION, TOP_K, HF_API_TOKEN
 
 SYSTEM_PROMPT = """You are a helpful customer support assistant.
 Use ONLY the context below to answer the question.
@@ -25,7 +25,10 @@ QA_PROMPT = PromptTemplate(
 )
 
 def load_vectorstore():
-    embeddings = HuggingFaceEmbeddings(model_name=EMBED_MODEL)
+    embeddings = HuggingFaceEndpointEmbeddings(
+        model=EMBED_MODEL,
+        huggingfacehub_api_token=HF_API_TOKEN,
+    )
     vectorstore = Chroma(
         collection_name=COLLECTION,
         embedding_function=embeddings,

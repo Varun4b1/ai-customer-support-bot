@@ -1,10 +1,9 @@
 from pathlib import Path
 from langchain_community.document_loaders import PyPDFLoader, TextLoader, DirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_community.vectorstores import Chroma
-from app.config import EMBED_MODEL, CHROMA_DIR, COLLECTION, CHUNK_SIZE, CHUNK_OVERLAP
-
+from app.config import EMBED_MODEL, CHROMA_DIR, COLLECTION, CHUNK_SIZE, CHUNK_OVERLAP, HF_API_TOKEN
 DOCS_DIR = Path("./docs")
 
 
@@ -38,7 +37,10 @@ def embed_and_store(chunks):
     """Embed and store ALL chunks in ONE shared collection.
     Each chunk's metadata already includes 'source' (the filename),
     so multi-file search works automatically — no extra setup needed."""
-    embeddings = HuggingFaceEmbeddings(model_name=EMBED_MODEL)
+    embeddings = HuggingFaceEndpointEmbeddings(
+    model=EMBED_MODEL,
+    huggingfacehub_api_token=HF_API_TOKEN,
+)
     vectorstore = Chroma.from_documents(
         documents=chunks,
         embedding=embeddings,
@@ -64,7 +66,10 @@ def ingest_single_file(filepath: Path):
     documents = loader.load()
     chunks = chunk_documents(documents)
 
-    embeddings = HuggingFaceEmbeddings(model_name=EMBED_MODEL)
+    embeddings = HuggingFaceEndpointEmbeddings(
+    model=EMBED_MODEL,
+    huggingfacehub_api_token=HF_API_TOKEN,
+)
     vectorstore = Chroma(
         collection_name=COLLECTION,
         embedding_function=embeddings,

@@ -6,6 +6,7 @@ load_dotenv()
 GROQ_API_KEY          = os.getenv("GROQ_API_KEY", "")
 LLM_MODEL             = "llama-3.3-70b-versatile"
 EMBED_MODEL           = "sentence-transformers/all-MiniLM-L6-v2"
+HF_API_TOKEN          = os.getenv("HF_API_TOKEN", "")
 
 CHROMA_DIR            = "./vectorstore"
 COLLECTION            = "support_docs"
