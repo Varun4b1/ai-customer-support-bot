@@ -180,34 +180,6 @@
     border-radius: 14px 14px 14px 4px;
   }
 
-  .evidence {
-    margin-top: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .chip {
-    font-family: 'Courier New', monospace;
-    font-size: 10.5px;
-    color: var(--good);
-    background: #EAF3EE;
-    border: 1px solid #CFE6D9;
-    padding: 4px 9px;
-    border-radius: 99px;
-    cursor: default;
-    letter-spacing: 0.01em;
-  }
-  .chip:hover { background: #DCEEE3; }
-
-  .no-evidence {
-    font-family: 'Courier New', monospace;
-    font-size: 10.5px;
-    color: var(--ink-soft);
-    margin-top: 6px;
-    letter-spacing: 0.01em;
-  }
-
   .typing {
     display: flex;
     gap: 4px;
@@ -344,7 +316,7 @@ async function doLogout(e) {
   return false;
 }
 
-function addMessage(role, text, sources) {
+function addMessage(role, text) {
   document.getElementById('empty')?.remove();
   const wrap = document.createElement('div');
   wrap.className = 'msg ' + role;
@@ -354,22 +326,9 @@ function addMessage(role, text, sources) {
   bubble.textContent = text;
   wrap.appendChild(bubble);
 
-  if (role === 'bot') {
-    if (sources && sources.length > 0) {
-      const ev = document.createElement('div');
-      ev.className = 'evidence';
-      sources.forEach(s => {
-        const chip = document.createElement('span');
-        chip.className = 'chip';
-        chip.title = s.snippet || '';
-        chip.textContent = '◆ ' + (s.source || 'source').split(/[\\/]/).pop();
-        ev.appendChild(chip);
-      });
-      wrap.appendChild(ev);
-    }
-    // No "no matching source" label anymore — if sources is empty,
-    // it's either because the answer didn't need them, or none were used.
-  }
+  // Source citations are still computed on the backend (visible via the
+  // /chat API response and the relevance-filtering logic in rag.py),
+  // but intentionally not rendered in the UI for a cleaner chat experience.
 
   document.getElementById('messages').appendChild(wrap);
   wrap.scrollIntoView({ behavior: 'smooth', block: 'end' });
@@ -403,15 +362,15 @@ async function sendQuestion(question) {
 
     if (!res.ok) {
       const err = await res.json();
-      addMessage('bot', 'Error: ' + (err.detail || 'Something went wrong.'), []);
+      addMessage('bot', 'Error: ' + (err.detail || 'Something went wrong.'));
       return;
     }
 
     const data = await res.json();
-    addMessage('bot', data.answer, data.sources);
+    addMessage('bot', data.answer);
   } catch (e) {
     hideTyping();
-    addMessage('bot', 'Could not reach the server. Please try again.', []);
+    addMessage('bot', 'Could not reach the server. Please try again.');
   } finally {
     document.getElementById('send').disabled = false;
   }
@@ -426,7 +385,7 @@ async function loadHistory() {
       document.getElementById('empty')?.remove();
       data.history.slice().reverse().forEach(item => {
         addMessage('user', item.question);
-        addMessage('bot', item.answer, item.sources);
+        addMessage('bot', item.answer);
       });
     }
   } catch (e) { /* ignore */ }
