@@ -1,5 +1,5 @@
 from langchain_groq import ChatGroq
-from langchain_huggingface import HuggingFaceEndpointEmbeddings
+from app.hf_embeddings import HFInferenceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -25,9 +25,9 @@ QA_PROMPT = PromptTemplate(
 )
 
 def load_vectorstore():
-    embeddings = HuggingFaceEndpointEmbeddings(
+    embeddings = HFInferenceEmbeddings(
         model=EMBED_MODEL,
-        huggingfacehub_api_token=HF_API_TOKEN,
+        api_token=HF_API_TOKEN,
     )
     vectorstore = Chroma(
         collection_name=COLLECTION,
