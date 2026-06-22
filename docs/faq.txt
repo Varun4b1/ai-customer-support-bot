@@ -1,0 +1,55 @@
+Company: TechCorp
+Document: Frequently Asked Questions (FAQ)
+
+---
+
+Q: How do I reset my password?
+A: Go to the login page and click "Forgot Password". Enter your registered email address and we will send you a reset link within 2 minutes. The link expires in 30 minutes. If you don't receive it, check your spam folder or contact support@techcorp.com.
+
+---
+
+Q: How do I create an account?
+A: Visit our website and click "Sign Up". Enter your name, email address, and a strong password. You will receive a verification email — click the link inside to activate your account. Account creation is free.
+
+---
+
+Q: How do I delete my account?
+A: Go to Settings → Account → Delete Account. You will be asked to confirm with your password. Account deletion is permanent and cannot be undone. Your data will be removed within 30 days as per our Privacy Policy.
+
+---
+
+Q: How do I change my email address?
+A: Go to Settings → Profile → Edit Email. Enter your new email address and click Save. A confirmation link will be sent to your new email. You must click that link to complete the change.
+
+---
+
+Q: How do I change my password?
+A: Go to Settings → Security → Change Password. Enter your current password followed by your new password. Your new password must be at least 8 characters and contain a mix of letters and numbers.
+
+---
+
+Q: I am not receiving emails from TechCorp. What should I do?
+A: First check your spam or junk folder. Add support@techcorp.com to your contacts to prevent filtering. If you still don't receive emails, contact our support team and we will investigate the issue on our end.
+
+---
+
+Q: How do I contact customer support?
+A: You can reach our support team through the following channels:
+- Email: support@techcorp.com (response within 24 hours)
+- Live Chat: Available Monday to Friday, 9am to 6pm IST
+- Phone: +91-22-1234-5678 (business hours only)
+
+---
+
+Q: What are your customer support working hours?
+A: Our support team is available Monday to Friday, 9am to 6pm IST. For urgent issues outside these hours, you can email support@techcorp.com and we will respond on the next business day.
+
+---
+
+Q: Is TechCorp available in my country?
+A: TechCorp is available in over 50 countries worldwide. To check if we support your country, visit our website and attempt to sign up — unsupported regions will be notified during registration.
+
+---
+
+Q: What languages does TechCorp support?
+A: Our platform currently supports English, Hindi, Tamil, Telugu, Spanish, French, and German. We are actively working on adding more languages.

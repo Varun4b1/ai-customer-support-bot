@@ -1,0 +1,55 @@
+Company: TechCorp
+Document: Pricing and Plans
+
+---
+
+Q: What plans does TechCorp offer?
+A: TechCorp offers three plans:
+- Starter (Free): 1 user, 5GB storage, basic features, email support
+- Pro (Rs. 999/month): Up to 10 users, 50GB storage, all features, priority support
+- Enterprise (Custom pricing): Unlimited users, unlimited storage, dedicated support, custom integrations
+
+---
+
+Q: Is there a free plan?
+A: Yes. Our Starter plan is completely free forever with no credit card required. It includes 1 user seat, 5GB of storage, and access to core features. You can upgrade to Pro or Enterprise at any time.
+
+---
+
+Q: How do I upgrade my plan?
+A: Go to Settings → Billing → Change Plan. Select your desired plan and enter your payment details. Upgrades take effect immediately and you will be charged a prorated amount for the remainder of the current billing cycle.
+
+---
+
+Q: How do I downgrade my plan?
+A: Go to Settings → Billing → Change Plan and select a lower tier. Downgrades take effect at the end of your current billing period. You will not receive a refund for the remaining days on your current plan.
+
+---
+
+Q: Are there any hidden fees?
+A: No. The price shown on our pricing page is exactly what you pay. There are no setup fees, no transaction fees, and no hidden charges. VAT or GST may be applied depending on your country.
+
+---
+
+Q: Do you offer student or NGO discounts?
+A: Yes. We offer a 50% discount for verified students and a 30% discount for registered non-profit organizations. Email discounts@techcorp.com with proof of eligibility to apply.
+
+---
+
+Q: Do you offer annual billing?
+A: Yes. Choosing annual billing gives you 2 months free compared to monthly billing. Go to Settings → Billing → Switch to Annual to change your billing cycle.
+
+---
+
+Q: What payment methods do you accept?
+A: We accept Visa, Mastercard, American Express, UPI, and PayPal. All payments are processed securely via Stripe. We do not store your card details on our servers.
+
+---
+
+Q: Can I get an invoice for my payment?
+A: Yes. Go to Settings → Billing → Invoice History to download PDF invoices for all past payments. Invoices are also automatically emailed to your registered email address after each payment.
+
+---
+
+Q: What happens if my payment fails?
+A: If a payment fails, we will retry it after 3 days and again after 7 days. You will receive an email notification each time. If payment fails after 3 attempts, your account will be downgraded to the free Starter plan until payment is resolved.

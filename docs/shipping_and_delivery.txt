@@ -1,0 +1,59 @@
+Company: TechCorp
+Document: Shipping and Delivery Policy
+
+---
+
+Q: How long does delivery take?
+A: Delivery times depend on your location:
+- Metro cities (Mumbai, Delhi, Bangalore, Chennai, Hyderabad): 2 to 3 business days
+- Tier 2 cities: 3 to 5 business days
+- Rural areas and remote locations: 5 to 8 business days
+- International orders: 7 to 14 business days
+
+---
+
+Q: Which countries do you ship to?
+A: We currently ship to India, USA, UK, Canada, Australia, Singapore, UAE, and Germany. We are expanding to more countries regularly. Check our website for the most up-to-date list of supported shipping destinations.
+
+---
+
+Q: How much does shipping cost?
+A: Shipping costs are as follows:
+- Orders above Rs. 999: Free shipping within India
+- Orders below Rs. 999: Flat Rs. 99 shipping within India
+- International orders: Calculated at checkout based on weight and destination
+
+---
+
+Q: How do I track my order?
+A: Once your order is shipped, you will receive a tracking number via email and SMS. Visit our website and go to Orders → Track Order, or use the link provided in your shipping confirmation email.
+
+---
+
+Q: What happens if my order is lost or damaged?
+A: If your order is lost or arrives damaged, contact support@techcorp.com within 7 days of the expected delivery date. Include your order number and photos of any damage. We will either send a replacement or issue a full refund within 5 business days.
+
+---
+
+Q: Can I change my delivery address after placing an order?
+A: Address changes are only possible within 2 hours of placing the order. Contact support@techcorp.com immediately with your order number and new address. After 2 hours, the order will have been dispatched and cannot be redirected.
+
+---
+
+Q: Do you offer same-day delivery?
+A: Same-day delivery is available in select metro cities for orders placed before 12pm. An additional charge of Rs. 199 applies. Check availability at checkout by entering your pin code.
+
+---
+
+Q: What should I do if I receive the wrong item?
+A: Contact support@techcorp.com within 48 hours of delivery with your order number and a photo of the item received. We will arrange a pickup of the wrong item and deliver the correct one at no additional charge within 3 to 5 business days.
+
+---
+
+Q: Can I schedule a specific delivery time?
+A: Currently we do not support specific delivery time slots. Our delivery partners will attempt delivery between 9am and 8pm. If you miss the delivery, they will attempt again the next business day, or you can arrange a pickup from the nearest courier facility.
+
+---
+
+Q: Do you deliver on weekends and public holidays?
+A: Our delivery partners operate on Saturdays but not on Sundays or public holidays. Orders placed on Friday after 5pm will typically be processed the following Monday.

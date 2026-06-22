@@ -1,0 +1,64 @@
+Company: TechCorp
+Document: Onboarding Guide — Getting Started
+
+---
+
+Q: How do I get started with TechCorp?
+A: Getting started is easy:
+1. Sign up at techcorp.com — it takes less than 2 minutes
+2. Verify your email address by clicking the link we send you
+3. Complete your profile (name, photo, preferences)
+4. Explore the dashboard using our interactive tour
+5. Upload your first document or create your first project
+6. Invite your team members (Pro and Enterprise plans)
+
+---
+
+Q: How do I set up my profile?
+A: Go to the top right corner and click your avatar → Profile Settings. You can add your name, profile photo, job title, and time zone. A complete profile helps your team members recognize you and ensures notifications are sent at the right time.
+
+---
+
+Q: How do I invite team members?
+A: Go to Settings → Team → Invite Members. Enter the email addresses of your teammates (one per line) and click Send Invitations. They will receive an email with a link to join your workspace. Team member invitations are available on Pro and Enterprise plans.
+
+---
+
+Q: What should I do first after signing up?
+A: We recommend this order for the best experience:
+1. Verify your email address
+2. Complete your profile
+3. Take the 3-minute interactive platform tour (you will see a prompt on your dashboard)
+4. Create your first project or workspace
+5. Upload any relevant files or documents
+6. Invite your colleagues if you are on a team plan
+
+---
+
+Q: Where can I find tutorials and help documentation?
+A: Visit our Help Center at help.techcorp.com for step-by-step guides, video tutorials, and best practice articles. You can also access in-app help by clicking the question mark icon in the bottom right corner of any page.
+
+---
+
+Q: How do I create my first project?
+A: Click the "New Project" button on your dashboard. Give your project a name and description, choose a color label, set the visibility (private or team), and click Create. You can then add tasks, files, and team members to the project.
+
+---
+
+Q: How do I import data from another tool?
+A: We support importing data from Trello, Asana, Notion, Jira, and CSV files. Go to Settings → Import Data, select your source tool, and follow the on-screen instructions. Imports typically complete within 5 to 15 minutes depending on data size.
+
+---
+
+Q: Is there a mobile app available?
+A: Yes. TechCorp is available on iOS (App Store) and Android (Google Play Store). Search for "TechCorp" and download the official app. Your account works across web, iOS, and Android seamlessly — all data syncs in real time.
+
+---
+
+Q: How do I set up two-factor authentication (2FA)?
+A: Go to Settings → Security → Two-Factor Authentication and click Enable. Choose between SMS verification or an authenticator app (Google Authenticator or Authy recommended). Follow the setup steps and save your backup codes in a safe place.
+
+---
+
+Q: How do I customize my dashboard?
+A: Click "Customize" in the top right of your dashboard. You can add, remove, and rearrange widgets such as Recent Activity, My Tasks, Team Updates, and Analytics. Your layout is saved automatically and synced across all your devices.

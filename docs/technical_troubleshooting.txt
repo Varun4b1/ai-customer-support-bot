@@ -1,0 +1,76 @@
+Company: TechCorp
+Document: Technical Troubleshooting Guide
+
+---
+
+Q: The app is not loading. What should I do?
+A: Try the following steps in order:
+1. Refresh the page (press Ctrl+R on Windows, Cmd+R on Mac)
+2. Clear your browser cache and cookies (Settings → Privacy → Clear browsing data)
+3. Try a different browser (Chrome, Firefox, or Edge)
+4. Disable browser extensions temporarily
+5. Check our status page at status.techcorp.com for any ongoing outages
+If none of these work, contact support@techcorp.com with a screenshot of the issue.
+
+---
+
+Q: How do I clear my cache?
+A: To clear cache in Chrome: Click the three dots menu → Settings → Privacy and Security → Clear browsing data → Select Cached images and files → Click Clear data. For Firefox: Click the menu → Settings → Privacy and Security → Cookies and Site Data → Clear Data.
+
+---
+
+Q: Why am I not receiving verification or notification emails?
+A: Check your spam or junk folder first. Add support@techcorp.com and noreply@techcorp.com to your contacts list. If your company uses a corporate email, ask your IT administrator to whitelist our email domain. Contact support if the issue persists.
+
+---
+
+Q: My payment is failing. What should I do?
+A: Payment failures can occur for several reasons:
+- Insufficient funds: Check your account balance
+- Card expired: Update your card in Settings → Billing
+- Bank blocking: Contact your bank to authorize the transaction
+- Wrong CVV or billing address: Re-enter your card details carefully
+- UPI timeout: Try again after 2 minutes
+If the issue persists, try a different payment method or contact support@techcorp.com.
+
+---
+
+Q: How do I update the app?
+A: On mobile (iOS): Open the App Store, search TechCorp, tap Update. On mobile (Android): Open Google Play Store, search TechCorp, tap Update. The web app updates automatically — just refresh your browser to get the latest version.
+
+---
+
+Q: The app is running slowly. How do I fix it?
+A: Try these steps:
+1. Close other browser tabs and applications
+2. Clear your browser cache
+3. Check your internet connection speed at fast.com (minimum 5 Mbps recommended)
+4. Try using Chrome or Edge for best performance
+5. Disable heavy browser extensions like ad blockers temporarily
+6. On mobile, restart the app and ensure it is updated to the latest version
+
+---
+
+Q: I am getting a "Session expired" error. What does it mean?
+A: Your login session has timed out for security reasons. Simply log in again to continue. Sessions expire after 24 hours of inactivity. If you are being logged out frequently, ensure cookies are enabled in your browser settings.
+
+---
+
+Q: How do I enable or disable notifications?
+A: In the web app: Go to Settings → Notifications and toggle the types of notifications you want to receive. On mobile: Go to your phone's Settings → Apps → TechCorp → Notifications to manage push notification permissions.
+
+---
+
+Q: I cannot upload files. What is the maximum file size?
+A: The maximum file size for uploads is 25MB per file. Supported formats are PDF, DOCX, XLSX, PNG, JPG, and CSV. If your file exceeds 25MB, try compressing it or splitting it into smaller parts. If you need to upload larger files regularly, consider upgrading to our Pro or Enterprise plan.
+
+---
+
+Q: The video or audio is not working during a call. What should I do?
+A: Check the following:
+1. Allow browser access to your camera and microphone (click the camera icon in your browser's address bar)
+2. Check that no other application is using your camera or microphone
+3. Refresh the page and rejoin the call
+4. Try a wired internet connection instead of WiFi
+5. Restart your browser
+If the issue continues, contact support@techcorp.com with your browser version and operating system details.

@@ -1,0 +1,62 @@
+Company: TechCorp
+Document: Refund and Returns Policy
+
+---
+
+Q: What is your return window?
+A: You may return most items within 30 days of delivery for a full refund. Items must be in their original condition, unused, and with all original packaging and tags intact. After 30 days, returns are not accepted.
+
+---
+
+Q: How do I initiate a return?
+A: To initiate a return:
+1. Go to Orders → My Orders on our website
+2. Select the order you want to return
+3. Click "Return Item" and select your reason
+4. Print the prepaid return label (emailed to you within 24 hours)
+5. Pack the item securely and drop it at any courier partner location
+
+---
+
+Q: When will I receive my refund?
+A: Once we receive and inspect the returned item (usually 2 to 3 business days after pickup), we will process your refund within 5 to 7 business days. Refunds are credited to the original payment method. UPI and bank transfers may take an additional 2 to 3 days depending on your bank.
+
+---
+
+Q: What items are non-refundable?
+A: The following items cannot be returned or refunded:
+- Digital products and software licenses (once downloaded or activated)
+- Perishable goods
+- Customized or personalized items
+- Items marked as Final Sale
+- Hygiene products once opened (earphones, undergarments, etc.)
+
+---
+
+Q: Can I exchange an item instead of returning it?
+A: Yes. During the return process, select "Exchange" instead of "Refund". You can exchange for the same item in a different size or color, or choose a different item of equal or lesser value. If the new item costs more, you will be charged the difference.
+
+---
+
+Q: Do I have to pay for return shipping?
+A: No. Return shipping is free for all eligible returns within India. A prepaid return label will be emailed to you. For international returns, customers are responsible for return shipping costs.
+
+---
+
+Q: What if I received a defective product?
+A: If you received a defective or faulty product, contact support@techcorp.com within 48 hours of delivery with your order number and clear photos or a video of the defect. We will send a replacement at no cost or issue a full refund — your choice.
+
+---
+
+Q: Can I return a gift?
+A: Yes. Gifts can be returned for store credit (not a refund to the original purchaser's payment method). Contact support@techcorp.com with the order number found on the packing slip inside the package.
+
+---
+
+Q: I accidentally returned the wrong item. What should I do?
+A: Contact support@techcorp.com immediately with your return tracking number. If the wrong item has not yet been processed, we will arrange to send it back to you. If it has already been processed, our team will assess the situation on a case-by-case basis.
+
+---
+
+Q: Do you offer a money-back guarantee?
+A: Yes. We offer a 14-day money-back guarantee for all new software subscriptions. If you are not satisfied within 14 days of your first payment, email billing@techcorp.com with your order ID and we will issue a full refund with no questions asked.
